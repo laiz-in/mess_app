@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'add_expense_style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Expense</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="added_person">ആരാണ് വാങ്ങിയത്?</label>
+                <select id="added_person" name="added_person" class="form-control" required>
+                    <option value="HARIS">HARIS</option>
+                    <option value="JAVAD">JAVAD</option>
+                    <option value="ALIMON">ALIMON</option>
+                    <option value="RAJIB">RAJIB</option>
+                    <option value="RABEEH">RABEEH</option>
+                    <option value="LAIZIN">LAIZIN</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="added_amount">എത്ര പൈസ ആയി?</label>
+                <input type="number" id="added_amount" name="added_amount" class="form-control" required inputmode="numeric" pattern="[0-9]*">
+            </div>
+            <div class="form-group">
+                <label for="added_date">എന്നാണ് വാങ്ങിയത് ?</label>
+                <input type="date" id="added_date" name="added_date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="description">എന്തൊക്കെ മേടിച്ചു?</label>
+                <textarea id="description" name="description" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>

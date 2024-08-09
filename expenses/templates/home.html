@@ -4,28 +4,15 @@
 <html>
 <head>
     <title>Expense Home Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center mb-4">Expense Management</h1>
+    <div class="container">
+        <h1>Expense Management</h1>
 
-        <div class="row justify-content-center">
-            <div class="col-12 mb-3">
-                <a href="{% url 'add_expense' %}" class="btn btn-primary btn-full">Add Expense</a>
-            </div>
-            <div class="col-12 mb-3">
-                <a href="{% url 'expense_list' %}" class="btn btn-success btn-full">View All Expenses</a>
-            </div>
-            <div class="col-12 mb-3 ">
-                <a href="{% url 'view_reports' %}" class="btn btn-info btn-full">View Reports</a>
-            </div>
-        </div>
+        <a href="{% url 'add_expense' %}" class="buttons">Add Expense</a>
+        <a href="{% url 'expense_list' %}" class="buttons">View All Expenses</a>
+        <a href="{% url 'view_reports' %}" class="buttons">View Reports</a>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

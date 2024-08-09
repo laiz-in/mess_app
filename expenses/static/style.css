@@ -1,117 +1,132 @@
-body {
-    font-family: Arial, sans-serif;
-    background: rgb(30, 30, 31) !important;
-}
-
-h1 {
-    color: #b1adad;
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin: 20px 0;
 }
 
 th, td {
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    font-size: 1.2rem;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+    background-color: #f1f1f1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }
 
 
-/* Custom styles for the modern look */
+
+
+
+
+
+
+
+
+
 body {
-    background-color: #f8f9fa; /* Light background color */
-    font-family: 'Arial', sans-serif; /* Modern font */
-    color: #333; /* Dark text color for better readability */
-}
-
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
 }
 
 h1 {
-    font-size: 2.5rem; /* Larger heading font size */
-    font-weight: 700; /* Bold heading */
-    color: #343a40; /* Darker color for the heading */
+    font-size: 3.5rem;
+    margin: 50px 25px 85px 25px;
 }
 
-.btn-full {
+.container {
     width: 100%;
-    font-size: 1.1rem; /* Slightly larger font size */
-    padding: 15px; /* Consistent padding */
-    text-align: center;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    max-width: 700px;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 
-.btn-primary {
-    background-color: #007bff; /* Modern blue color */
-    border: none; /* Remove default border */
+.buttons {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    margin: 25px 0;
+    font-size: 3.5rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    background-color: #007bff;
+
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+.buttons:hover {
+    opacity: 0.9;
 }
 
-.btn-success {
-    background-color: #28a745; /* Modern green color */
-    border: none; /* Remove default border */
-}
 
-.btn-success:hover {
-    background-color: #1e7e34; /* Darker green on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
-}
-
-.btn-info {
-    background-color: #17a2b8; /* Modern teal color */
-    border: none; /* Remove default border */
-}
-
-.btn-info:hover {
-    background-color: #117a8b; /* Darker teal on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
-}
-
-/* Mobile Styles */
-@media (max-width: 767px) {
-    body {
-        background-color: #0e2d4d !important; /* Light background color */
-        font-family: 'Arial', sans-serif; /* Modern font */
-        color: #333; /* Dark text color for better readability */
-    }
-
-    .container {
-        padding-left: 10px; /* Reduce padding for smaller screens */
-        padding-right: 10px;
-    }
-
+/* Media query for mobile screens */
+@media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Slightly smaller font size for headings on mobile */
-        font-weight: 700; /* Keep heading bold */
-        color: #3089e2; /* Darker color for the heading */
+        font-size: 3rem;
     }
 
-    .btn-full {
-        width: 100%;
-        font-size: 1rem; /* Smaller font size for mobile */
-        padding: 12px; /* Adjust padding for smaller screens */
-        text-align: center;
-        border-radius: 6px; /* Rounded corners */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        transition: all 0.3s ease; /* Smooth transition for hover effects */
-    }
-
-    .btn-primary, .btn-success, .btn-info {
-        font-size: 3rem; /* Ensure font size is consistent across buttons */
-        padding: 12px; /* Adjust padding for smaller screens */
+    .buttons {
+        font-size: 1.8rem;
+        padding: 25px;
     }
 }
